@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html lang="en" style="height: 100%">
+<head>
+    <title>AddQuit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'base/css/new.css' %}">
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        {% include 'common/header.html' %}
+    </header>
+    <main>
+        <h1 style="text-align:center;">Let's create your new quit!
+            <a class="underline" href="{% url 'profile_details' %}">
+                <button class="button-style">Back to profile</button>
+            </a>
+        </h1>
+        <section class="border-details">
+            <div class="container extended_register">
+                <form action="{% url 'add_quit' %}" class="signin-form" method="post">
+                    <div>{{ form.title }}</div>
+                    <div class="add_field">Photo: {{ form.photo }}</div>
+                    <div class="add_field">{{ form.description }}</div>
+                    <div class="add_field">Tagged_people: {{ form.tagged_people }}</div>
+                    <div>
+                        <button type="submit" class="button-style add_field">Add Quit</button>
+                    </div>
+                    {% csrf_token %}
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        {% include 'common/footer.html' %}
+    </footer>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+            const header = document.getElementById("fixed-header");
+            const stickyOffset = 180;
+            function myFunction() {
+                if (window.pageYOffset > stickyOffset && !header.classList.contains("sticky")) {
+                    header.classList.add("sticky");
+                    document.body.style.paddingTop = header.offsetHeight + "px";
+                } else if (window.pageYOffset <= stickyOffset && header.classList.contains("sticky")) {
+                    header.classList.remove("sticky");
+                    document.body.style.paddingTop = 0;
+                }
+            }
+            window.addEventListener("scroll", myFunction);
+        }
+    );
+</script>
+</html>

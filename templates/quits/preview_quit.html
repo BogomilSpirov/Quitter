@@ -1,0 +1,87 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+        <head>
+            <title>PreviewQuit</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="stylesheet" href="{% static 'base/css/new.css' %}">
+            <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+            <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+        </head>
+        <body>
+            <header>
+                {% include 'common/header.html' %}
+            </header>
+            <main>
+                <h1 style="text-align:center;">Let's see that quit's details!
+                    <a class="underline" href="{% url 'index' %}">
+                        <button class="button-style">Back to Main Page</button>
+                    </a>
+                </h1>
+                <section class="border-details">
+                    <article class="container extended_register">
+                        <div class="container3">
+                            <h1>
+                                <div class="container-edit">
+                                    <a href="{% url 'profile_preview' pk=quit.user.pk %}">
+                                        <img class="profile_image" src="{{ quit.user.profile_picture }}" alt="quit_photo">
+                                    </a>
+                                    <a class="underline" href="{% url 'profile_preview' pk=quit.user.pk %}">
+                                        {{ quit.user.username }}
+                                    </a>
+                                </div>
+                            </h1>
+                            <h1>
+                                {{ quit.title }}
+                            </h1>
+                        </div>
+                        <div class="add_field"><img class="formatted_images" src="{{ object.photo.url }}" alt="object.photo"></div>
+                        <h3 class="add_field">{{ object.description }}</h3>
+                        {% if not quit.tagged_people.all %}
+                            <h3>No tagged people</h3>
+                        {% else %}
+                            <h3>@{{ quit.tagged_people.all|join:", @" }}</h3>
+                        {% endif %}
+                        <h3 class="add_field extended_register full_width">
+                            {{ quit.like_set.count }} {% if quit.like_set.count == 1 %}like{% else %}likes{% endif %},
+                            {{ quit.comment_set.count }} {% if quit.comment_set.count == 1 %}comment:{% else %}comments:{% endif %}
+                            {% if quit.comment_set.all %}
+                                {% for comment in quit.comment_set.all %}
+                                    <div class="border-details full_width">
+                                        <div class="add_field">{{ comment.published }}</div>
+                                        <div class="add_field">{{ comment.user.username }} says: </div>
+                                        <div class="add_field wrap-overflow">Comment: {{ comment.comment_text }}</div>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        </h3>
+                    </article>
+                </section>
+            </main>
+            <footer>
+                {% include 'common/footer.html' %}
+            </footer>
+        </body>
+        {% if object.comment_set.count > 3 %}
+            <script>
+                window.addEventListener("DOMContentLoaded", function() {
+                        const header = document.getElementById("fixed-header");
+                        const stickyOffset = 180;
+                        function myFunction() {
+                            if (window.pageYOffset > stickyOffset && !header.classList.contains("sticky")) {
+                                header.classList.add("sticky");
+                                document.body.style.paddingTop = header.offsetHeight + "px";
+                            } else if (window.pageYOffset <= stickyOffset && header.classList.contains("sticky")) {
+                                header.classList.remove("sticky");
+                                document.body.style.paddingTop = 0;
+                            }
+                        }
+                        window.addEventListener("scroll", myFunction);
+                    }
+                );
+            </script>
+        {% else %}
+            <script></script>
+        {% endif %}
+    </html>

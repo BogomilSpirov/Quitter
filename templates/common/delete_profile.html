@@ -1,0 +1,60 @@
+{% load static %}
+<!doctype html>
+<html lang="en" style="height: 100%">
+<head>
+    <title>DeleteProfile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'base/css/new.css' %}">
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        {% include 'common/header.html' %}
+    </header>
+    <main>
+        <section class="border-details">
+            <div class="container extended_register">
+                <h2>Are you sure you want to <span class="attention underline">delete your account</span>...?
+                    <a class="underline" href="{% url 'profile_details' %}">
+                        <button class="button-style">Back to profile</button>
+                    </a>
+                </h2>
+                <form action="{% url 'profile_delete' pk=request.user.pk %}" class="signin-form" method="post">
+                    <div>First Name: {% if object.first_name %}{{ object.first_name }}{% else %}No First Name Given...{% endif %}</div>
+                    <div class="add_field">Last Name: {% if object.last_name %}{{ object.last_name }}{% else %}No Last Name Given...{% endif %}</div>
+                    <div class="add_field">Email: {{ object.email }}</div>
+                    <div class="add_field">Age: {{ age }}</div>
+                    <div class="add_field">Gender: {% if object.gender == "Gender.do_not_show" %}Do Not Show{% else %}{{ object.gender }}{% endif %}</div>
+                    <div class="add_field">Profile Picture: <img class="formatted_images" src="{{ object.profile_picture }}" alt="photo_url"></div>
+                    <div>
+                        <button type="submit" class="button-style">Delete Profile</button>
+                    </div>
+                    {% csrf_token %}
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+    {% include 'common/footer.html' %}
+    </footer>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+            const header = document.getElementById("fixed-header");
+            const stickyOffset = 180;
+            function myFunction() {
+                if (window.pageYOffset > stickyOffset && !header.classList.contains("sticky")) {
+                    header.classList.add("sticky");
+                    document.body.style.paddingTop = header.offsetHeight + "px";
+                } else if (window.pageYOffset <= stickyOffset && header.classList.contains("sticky")) {
+                    header.classList.remove("sticky");
+                    document.body.style.paddingTop = 0;
+                }
+            }
+            window.addEventListener("scroll", myFunction);
+        }
+    );
+</script>
+</html>

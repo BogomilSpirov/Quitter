@@ -1,0 +1,47 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <title>DeleteQuit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'base/css/new.css' %}">
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        {% include 'common/header.html' %}
+    </header>
+    <main>
+        <h1 style="text-align:center;">Are you sure you want to <span class="attention underline">delete that quit</span>...?
+            <a class="underline" href="{% url 'profile_details' %}">
+                <button class="button-style">Back to profile</button>
+            </a>
+        </h1>
+        <section class="border-details">
+        <div class="container extended_register">
+            <form action="{% url 'delete_quit' pk=object.pk %}" class="signin-form" method="post">
+                <h2>
+                    {{ object.title }}, {{ quit.like_set.count }} {% if quit.like_set.count == 1 %}like{% else %}likes{% endif %}
+                </h2>
+                <div class="add_field"><img class="formatted_images2" src="{{ object.photo.url }}" alt="object.photo"></div>
+                <h3 class="add_field">{{ object.description }}</h3>
+                {% if not quit.tagged_people.all %}
+                    <h3>No tagged people so far</h3>
+                {% else %}
+                    <h3>@{{ quit.tagged_people.all|join:", @" }}</h3>
+                {% endif %}
+                <div>
+                    <button type="submit" class="button-style add_field">Delete Quit</button>
+                </div>
+                {% csrf_token %}
+            </form>
+        </div>
+    </section>
+    </main>
+    <footer>
+        {% include 'common/footer.html' %}
+    </footer>
+</body>
+</html>

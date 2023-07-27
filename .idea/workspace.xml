@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6d65dcbc-5398-466a-8f18-e3ff5099c789" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="Dockerfile" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SZ3w0rnmDxGdMxoXD2dmj3nCJd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/PycharmProjects/petstagram&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\PycharmProjects\quitter\quitter\quits" />
+      <recent name="C:\Users\PC\PycharmProjects\quitter\quitter\photos" />
+      <recent name="C:\Users\PC\PycharmProjects\quitter\quitter\common" />
+      <recent name="C:\Users\PC\PycharmProjects\quitter\quitter\accounts" />
+      <recent name="C:\Users\PC\PycharmProjects\quitter\templates\quits" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\PycharmProjects\quitter\templates\common" />
+      <recent name="C:\Users\PC\PycharmProjects\quitter\quitter" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django Server.quitter">
+    <configuration name="Test: tests.common.views.ViewTest" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="quitter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.common.views.ViewTest" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.common.views.ViewTest.test_comment_form" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="quitter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.common.views.ViewTest.test_comment_form" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.common.views.ViewTest.test_index_view_right_template" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="quitter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.common.views.ViewTest.test_index_view_right_template" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.common.views.ViewTest.test_search_form" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="quitter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.common.views.ViewTest.test_search_form" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.common.views.ViewTest.test_search_form_in_action" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="quitter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.common.views.ViewTest.test_search_form_in_action" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="quitter" type="Python.DjangoServer" factoryName="Django server">
+      <module name="quitter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="quitter.settings" />
+      </envs>
+      <option name="SDK_HOME" value="D:\PyCharm_projects\PycharmProjects\quitter\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.12 (quitter) (2)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH="envs/.env" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django Server.quitter" />
+      <item itemvalue="Django tests.Test: tests.common.views.ViewTest" />
+      <item itemvalue="Django tests.Test: tests.common.views.ViewTest.test_comment_form" />
+      <item itemvalue="Django tests.Test: tests.common.views.ViewTest.test_index_view_right_template" />
+      <item itemvalue="Django tests.Test: tests.common.views.ViewTest.test_search_form" />
+      <item itemvalue="Django tests.Test: tests.common.views.ViewTest.test_search_form_in_action" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d65dcbc-5398-466a-8f18-e3ff5099c789" name="Changes" comment="" />
+      <created>1689340511007</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689340511007</updated>
+      <workItem from="1689340520653" duration="20000" />
+      <workItem from="1689340609601" duration="2000" />
+      <workItem from="1689344969810" duration="1972000" />
+      <workItem from="1689346951758" duration="141000" />
+      <workItem from="1689354156458" duration="2302000" />
+      <workItem from="1689356468189" duration="763000" />
+      <workItem from="1689357237210" duration="2258000" />
+      <workItem from="1689359507449" duration="1380000" />
+      <workItem from="1689421821395" duration="13909000" />
+      <workItem from="1689437629321" duration="2777000" />
+      <workItem from="1689440414235" duration="1649000" />
+      <workItem from="1689449491618" duration="3447000" />
+      <workItem from="1689503805661" duration="705000" />
+      <workItem from="1689504529164" duration="5000" />
+      <workItem from="1689522379781" duration="29000" />
+      <workItem from="1689522415285" duration="62000" />
+      <workItem from="1689522483555" duration="13000" />
+      <workItem from="1689528400833" duration="224000" />
+      <workItem from="1689531134813" duration="88000" />
+      <workItem from="1689603322767" duration="8864000" />
+      <workItem from="1689622971151" duration="12000" />
+      <workItem from="1689667915501" duration="24519000" />
+      <workItem from="1689695138503" duration="11000" />
+      <workItem from="1689695155704" duration="1690000" />
+      <workItem from="1689696871487" duration="10000" />
+      <workItem from="1689696888415" duration="10000" />
+      <workItem from="1689701666903" duration="14548000" />
+      <workItem from="1689716238201" duration="66000" />
+      <workItem from="1689716317112" duration="16000" />
+      <workItem from="1689716496720" duration="32000" />
+      <workItem from="1689762819898" duration="14744000" />
+      <workItem from="1689780949229" duration="29000" />
+      <workItem from="1689781014591" duration="1805000" />
+      <workItem from="1689841822000" duration="32000" />
+      <workItem from="1689841860453" duration="17168000" />
+      <workItem from="1689880297444" duration="24000" />
+      <workItem from="1689880329549" duration="1252000" />
+      <workItem from="1689927149511" duration="33113000" />
+      <workItem from="1689963344250" duration="33000" />
+      <workItem from="1690109538786" duration="16635000" />
+      <workItem from="1690129315706" duration="717000" />
+      <workItem from="1690207367946" duration="6097000" />
+      <workItem from="1690213566256" duration="7152000" />
+      <workItem from="1690221795188" duration="3131000" />
+      <workItem from="1690226174722" duration="1000" />
+      <workItem from="1690226222715" duration="657000" />
+      <workItem from="1690226887514" duration="3548000" />
+      <workItem from="1690234411634" duration="303000" />
+      <workItem from="1690234725515" duration="946000" />
+      <workItem from="1690235693965" duration="673000" />
+      <workItem from="1690236381253" duration="96000" />
+      <workItem from="1690237522618" duration="73000" />
+      <workItem from="1690289905851" duration="745000" />
+      <workItem from="1690375735519" duration="1999000" />
+      <workItem from="1690378853791" duration="251000" />
+      <workItem from="1690379112307" duration="9690000" />
+      <workItem from="1690389000075" duration="2995000" />
+      <workItem from="1690450017604" duration="599000" />
+      <workItem from="1690452690517" duration="288000" />
+      <workItem from="1690458618790" duration="605000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+</project>

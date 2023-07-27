@@ -1,0 +1,44 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <title>DeletePhoto</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'base/css/new.css' %}">
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        {% include 'common/header.html' %}
+    </header>
+    <main>
+        <h1 style="text-align:center;">Are you sure you want to delete that photo...? This would also <span class="attention underline">delete ALL the quits, that include this photo!</span>
+            <a class="underline" href="{% url 'profile_details' %}">
+                <button class="button-style">Back to profile</button>
+            </a>
+        </h1>
+        <section class="border-details">
+            <div class="container extended_register">
+                <form action="{% url 'delete_photo' pk=object.pk %}" class="signin-form" method="post">
+                    <h2>{{ object.name }}</h2>
+                    <h4 class="add_field">{{ object.about }}</h4>
+                    <div class="add_field">
+                        <img class="formatted_images2" src="{{ object.url }}" alt="object.url">
+                    </div>
+                    <h4>{{ object.published }}</h4>
+                    <div>
+                        <button type="submit" class="button-style add_field">Delete Photo</button>
+                    </div>
+
+                    {% csrf_token %}
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        {% include 'common/footer.html' %}
+    </footer>
+</body>
+</html>

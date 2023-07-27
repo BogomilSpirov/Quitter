@@ -1,0 +1,61 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <title>EditProfile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'base/css/new.css' %}">
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        {% include 'common/header.html' %}
+    </header>
+    <main>
+        <section class="border-details">
+            <div class="container extended_register">
+                <h2>Let's edit your profile!
+                    <a class="underline" href="{% url 'profile_details' %}">
+                        <button class="button-style">Back to profile</button>
+                    </a>
+                </h2>
+                <form action="{% url 'profile_edit' pk=request.user.pk %}" class="signin-form" method="post" autocomplete="off">
+                    <div>First Name: {{ form.first_name }}</div>
+                    <div class="add_field">Last Name: {{ form.last_name }}</div>
+                    <div class="add_field">Email: {{ form.email }}</div>
+                    <div class="add_field">Date Of Birth: {{ form.date_of_birth }}</div>
+                    <div class="add_field">Gender: {{ form.gender }}</div>
+                    <div class="add_field">Profile Picture: {{ form.profile_picture }}</div>
+                    <div class="add_field">Current Picture: <img class="formatted_images" src="{{ object.profile_picture }}" alt="photo_url"></div>
+                    <div>
+                        <button type="submit" class="button-style">Edit Profile</button>
+                    </div>
+                    {% csrf_token %}
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        {% include 'common/footer.html' %}
+    </footer>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+            const header = document.getElementById("fixed-header");
+            const stickyOffset = 180;
+            function myFunction() {
+                if (window.pageYOffset > stickyOffset && !header.classList.contains("sticky")) {
+                    header.classList.add("sticky");
+                    document.body.style.paddingTop = header.offsetHeight + "px";
+                } else if (window.pageYOffset <= stickyOffset && header.classList.contains("sticky")) {
+                    header.classList.remove("sticky");
+                    document.body.style.paddingTop = 0;
+                }
+            }
+            window.addEventListener("scroll", myFunction);
+        }
+    );
+</script>
+</html>

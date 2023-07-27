@@ -1,0 +1,118 @@
+{% load static %}
+<!doctype html>
+{% if photos.all|length == 0 %}
+    <html lang="en" style="height: 100%">
+{% else %}
+    <html lang="en">
+{% endif %}
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport"
+                  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <link rel="stylesheet" href="{% static 'base/css/new.css' %}">
+            <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+            <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+            <title>ProfileDetails</title>
+        </head>
+        <body>
+            <header>
+                {% include 'common/header.html' %}
+            </header>
+            <main class="profile_details">
+                <div class="container-edit" style="gap: 20px">
+                    <a href="{% url 'profile_preview' pk=user.pk %}">
+                        <div class="container-edit">
+                            <img class="profile_image" src="{{ user.profile_picture }}" alt="quit_photo">
+                            <h1>{{ user.username }}, {{ user.follow_user.count }} followers</h1>
+                        </div>
+                    </a>
+                    <h1>
+                        <a href="{% url 'profile_edit' pk=request.user.pk %}"><button class="button-style button-color-edit">Edit account</button></a>
+                        <a href="{% url 'profile_delete' pk=request.user.pk %}"><button class="button-style button-color-delete">Delete account</button></a>
+                    </h1>
+                </div>
+                <section class="border-details">
+                    <h2>{{ photos.all|length }}
+                        {% if photos.all|length == 1 %} photo.{% else %} photos.{% endif %}
+                        <a class="underline" href="{% url 'add_photo' %}">
+                            <button class="button-style">Add Photo</button>
+                        </a>
+                    </h2>
+                        {% if photos.all %}
+                            <div class="details_container">
+                                {% for photo in photos %}
+                                    <article>
+                                        <h2>{{ photo.name }}
+                                            <a href="{% url 'edit_photo' photo.pk %}"><button class="button-style button-color-edit">Edit</button></a>
+                                            <a href="{% url 'delete_photo' photo.pk %}"><button class="button-style button-color-delete">Remove</button></a>
+                                        </h2>
+                                        <h3>{{ photo.about }}</h3>
+                                        <img class="formatted_images" src="{{ photo.url }}" alt="photo_url">
+                                        <h4>{{ photo.published }}</h4>
+                                    </article>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <h3>Well, you haven't posted any photos yet.</h3>
+                        {% endif %}
+                </section>
+                <section class="border-details">
+                    <h2>
+                        {{ quits.all|length }}
+                        {% if quits.all|length == 1 %} quit.{% else %} quits.{% endif %}
+                        <a class="underline" href="{% url 'add_quit' %}">
+                            <button class="button-style">Add Quit</button>
+                        </a>
+                    </h2>
+                        {% if quits.all %}
+                            <div class="details_container">
+                                {% for quit in quits %}
+                                    <article>
+                                        <h2>{{ quit.title }}</h2>
+                                        <p>
+                                            <a href="{% url 'preview_quit' quit.pk %}"><button class="button-style">Preview</button></a>
+                                            <a href="{% url 'edit_quit' quit.pk %}"><button class="button-style button-color-edit">Edit</button></a>
+                                            <a href="{% url 'delete_quit' quit.pk %}"><button class="button-style button-color-delete">Remove</button></a>
+                                        </p>
+                                        <h3 class="wrap-overflow">{{ quit.description }}</h3>
+                                        <img class="formatted_images" src="{{ quit.photo.url }}" alt="photo_url">
+                                        <div class="add_field extended_register full_width">
+                                            {{ quit.like_set.count }} {% if quit.like_set.count == 1 %}like{% else %}likes{% endif %},
+                                            {{ quit.comment_set.count }} {% if quit.comment_set.count == 1 %}comment{% else %}comments{% endif %}
+                                        </div>
+                                        {% if not quit.tagged_people.all %}
+                                            <h4>No tagged people</h4>
+                                        {% else %}
+                                            <h4>@{{ quit.tagged_people.all|join:", @" }}</h4>
+                                        {% endif %}
+                                    </article>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <h3>Well, you haven't posted any quits yet. </h3>
+                        {% endif %}
+                </section>
+            </main>
+            <footer>
+                {% include 'common/footer.html' %}
+            </footer>
+        </body>
+        <script>
+            window.addEventListener("DOMContentLoaded", function() {
+                    const header = document.getElementById("fixed-header");
+                    const stickyOffset = 180;
+                    function myFunction() {
+                        if (window.pageYOffset > stickyOffset && !header.classList.contains("sticky")) {
+                            header.classList.add("sticky");
+                            document.body.style.paddingTop = header.offsetHeight + "px";
+                        } else if (window.pageYOffset <= stickyOffset && header.classList.contains("sticky")) {
+                            header.classList.remove("sticky");
+                            document.body.style.paddingTop = 0;
+                        }
+                    }
+                    window.addEventListener("scroll", myFunction);
+                }
+            );
+        </script>
+    </html>
