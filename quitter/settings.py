@@ -83,7 +83,7 @@ DATABASES = {
 		"NAME": "quitter_db",
 		"USER": "postgres-user",
 		"PASSWORD": "bogsataludiq",
-		"HOST": "127.0.0.1",  # use os.getenv('DB_HOST') if production
+		"HOST": "dpg-cldodbrmot1c73drc6e0-a.frankfurt-postgres.render.com",  # use os.getenv('DB_HOST') if production
 		"PORT": "5432",
 	}
 }
