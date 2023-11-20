@@ -1,4 +1,5 @@
-# Quitter
+# Quitter 
+# Hosted on: https://quitter-lfb4.onrender.com
 A simplified copy of Twitter-like social media
 
 Note: This repository contains files related to Docker (Dockerfile and docker-compose.yml), as well as an 'envs' folder, 
