@@ -77,6 +77,19 @@ WSGI_APPLICATION = 'quitter.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'your_database_name',
+#         'USER': 'your_database_user',
+#         'PASSWORD': 'your_database_password',
+#         'HOST': 'your_database_host',
+#         'PORT': 'your_database_port',
+#         'OPTIONS': {
+#             'sslmode': 'require',  # Adjust this based on your PostgreSQL configuration
+#         },
+#     },
+# }
 DATABASES = {
 	"default": {
 		"ENGINE": "django.db.backends.postgresql",
@@ -85,6 +98,9 @@ DATABASES = {
 		"PASSWORD": "bogsataludiq",
 		"HOST": "dpg-cldodbrmot1c73drc6e0-a.frankfurt-postgres.render.com",  # use os.getenv('DB_HOST') if production
 		"PORT": "5432",
+		'OPTIONS': {
+            		'sslmode': 'require',  # Adjust this based on your PostgreSQL configuration
+        	},
 	}
 }
 # Password validation
