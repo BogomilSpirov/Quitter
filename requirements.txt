@@ -26,3 +26,4 @@ typing_extensions
 tzdata
 vine
 wcwidth
+whitenoise
