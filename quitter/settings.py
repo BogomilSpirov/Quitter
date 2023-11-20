@@ -94,8 +94,8 @@ DATABASES = {
 	"default": {
 		"ENGINE": "django.db.backends.postgresql",
 		"NAME": "quitter_db",
-		"USER": "postgres-user",
-		"PASSWORD": "bogsataludiq",
+		"USER": "quitter_db_user",
+		"PASSWORD": "x6vzsfjn0UxrfHhzZJ9uODE4aZGy5QN0",
 		"HOST": "dpg-cldodbrmot1c73drc6e0-a.frankfurt-postgres.render.com",  # use os.getenv('DB_HOST') if production
 		"PORT": "5432",
 		'OPTIONS': {
